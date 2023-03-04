@@ -17,3 +17,36 @@ minikube start --driver=docker
 to check the version
 minikube version
 minikube status
+
+kubectl apply -f Deployment.yml
+
+kubectl apply -f services.yml
+
+kubectl get deployment
+
+kubectl get pods -o wide
+
+kubectl get services
+
+(to expose)
+
+kubectl expose deployment reddit-clone-deployment --type=NodePort
+ 
+minikube service addressbook --url
+ 
+curl -L http://192.168.49.2:31000
+
+kubectl port-forward svc/servicename-service 3000:3000 --address 0.0.0.0 &
+
+(to scalup the replica)
+
+kubectl scale --replicas=10 -f deployment.yml
+
+(to add the ingress)
+
+minikube addons enable ingress
+
+minikube addons list 
+
+
+
