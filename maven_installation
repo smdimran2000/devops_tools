@@ -1,0 +1,20 @@
+apt update 
+
+apt install maven -y 
+
+commands for maven execute
+
+mvn archetype:generate
+
+mvn clean
+
+mvn test
+
+mvn compile
+
+adding compiler dependency
+
+<properties>
+ <maven.compiler.source>6</maven.compiler.source>
+ <maven.compiler.target>1.6</maven.compiler.target>
+</properties>
