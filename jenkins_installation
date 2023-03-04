@@ -6,7 +6,27 @@ curl -fsSL https://pkg.jenkins.io/debian/jenkins.io.key | sudo tee \
     /etc/apt/sources.list.d/jenkins.list > /dev/null
   
   sudo apt-get update
+
   sudo apt-get install fontconfig openjdk-11-jre
+
   sudo apt-get install jenkins
   
   after check with publib_ip:8080
+
+(docker_configration_in_jenkins)
+
+<make sure you have to install docker on your jenkins instances>
+
+apt update 
+
+apt install docker.io -y 
+
+usermod -aG docker jenkins
+
+usermod -aG root jenkins
+
+chmod 777 /var/run/docker.sock
+
+(after that we have do) 
+
+service jenkins restart
