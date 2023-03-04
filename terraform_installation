@@ -11,3 +11,5 @@ sudo unzip terraform_1.3.6_linux_386.zip
 sudo mv /opt/terraform/terraform /usr/bin/
  
 terraform -version
+
+cd /opt/terraform
