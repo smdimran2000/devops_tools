@@ -1,0 +1,18 @@
+ apt-get update
+ 
+# apt-get upgrade
+
+#sudo apt install Prometheus
+
+# sudo systemctl start Prometheus
+
+# sudo apt-get install prometheus-node-exporter
+
+# sudo systemctl start prometheus-node-exporter
+
+# sudo systemctl enable prometheus-node-exporter
+
+# service prometheus-node-exporter start
+
+# service prometheus-node-exporter status
+
