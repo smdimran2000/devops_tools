@@ -1,0 +1,7 @@
+apt update 
+
+apt install ansible -y 
+
+ansible --version
+
+cd /etc/ansible
