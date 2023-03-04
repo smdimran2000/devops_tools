@@ -16,3 +16,4 @@
 
 # service prometheus-node-exporter status
 
+and check with the public_ip:9090
