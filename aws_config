@@ -1,0 +1,24 @@
+frist we have to creat IAM user for that 
+TAKE ACESS KEY & SECRET KEY
+
+# apt update
+# apt install awscli -y
+
+Create a key pair
+# aws ec2 create-key-pair --key-name <keypair-Name> --query 'KeyMaterial' --output 
+text > <keypair-Name.pem>
+
+Delete a key pair
+# aws ec2 delete-key-pair --key-name <keypair-Name>
+
+Create a Security Group & Adding Inbound rules
+# aws ec2 create-security-group --group-name <security grp Name> --description 
+"<Description>"
+
+# curl https://checkip.amazonaws.com
+
+# aws ec2 authorize-security-group-ingress --group-id <security group Id> --protocol 
+tcp --port <port Number> --cidr <ip address>
+
+# aws ec2 authorize-security-group-ingress --group-id <security grp Id>--protocol tcp 
+--port 22-8000 --cidr 0.0.0.0/0
