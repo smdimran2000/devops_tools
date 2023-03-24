@@ -1,7 +1,11 @@
-apt update 
+apt update
 
-apt install ansible -y 
+apt install software-properties-common
 
+apt-add-repository --yes --update ppa:ansible/ansible
+
+apt install ansible
+ 
 ansible --version
 
 cd /etc/ansible
