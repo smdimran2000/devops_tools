@@ -17,4 +17,4 @@ public_ip or privated_ip
 [nameofserver:vars]
 ansible_ssh_user= name of user
 ansible_ssh_port= 22
-ansible_private_key_file= /etc/ansibie/file.pem
+ansible_private_key_file= /etc/ansible/file.pem
