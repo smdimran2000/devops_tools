@@ -1,0 +1,54 @@
+package adressbook.addressbooksl;
+
+		
+		import java.util.concurrent.TimeUnit;
+		import org.openqa.selenium.By;
+		import org.openqa.selenium.WebDriver;
+		import org.openqa.selenium.chrome.ChromeDriver;
+		import org.openqa.selenium.chrome.ChromeOptions;
+		import org.openqa.selenium.WebDriverException;
+
+		public class seleniumtestcases {
+
+			public static void main(String[] args) throws InterruptedException {
+				System.setProperty("webdriver.chrome.driver","C:\\DevOps classes\\chromedriver_win32\\chromedriver.exe");
+				ChromeOptions chromeOptions = new ChromeOptions();
+				chromeOptions.addArguments("--remote-allow-origins=*");
+				ChromeDriver driver = new ChromeDriver(chromeOptions);
+				System.out.println("Hi,welcome to selenium testcases");
+				
+				driver.get("http://35.170.72.33:8082/addressbook/");
+				driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);
+				driver.findElement(By.className("v-button")).click();
+				driver.findElement(By.id("gwt-uid-5")).sendKeys("Madhu");
+				driver.findElement(By.id("gwt-uid-7")).sendKeys("Thalamanchi");
+				driver.findElement(By.id("gwt-uid-9")).sendKeys("1111111111");
+				driver.findElement(By.id("gwt-uid-11")).sendKeys("abc@gmail.com");
+				driver.findElement(By.id("gwt-uid-13")).sendKeys("3/31/23,");
+				driver.findElement(By.className("v-button-primary")).click();
+				System.out.println("TestCase Executed");
+				Thread.sleep(5000);
+				//driver.quit();
+			}
+		}
+    
+    pom.xml_dependency
+    
+    <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+     <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>4.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-http-jdk-client</artifactId>
+      <version>4.5.0</version>
+    </dependency>
+  </dependencies
