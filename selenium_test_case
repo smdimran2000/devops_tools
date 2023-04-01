@@ -11,7 +11,7 @@ package adressbook.addressbooksl;
 		public class seleniumtestcases {
 
 			public static void main(String[] args) throws InterruptedException {
-				System.setProperty("webdriver.chrome.driver","C:\\DevOps classes\\chromedriver_win32\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver","D:\chromedriver_win32\\chromedriver.exe");
 				ChromeOptions chromeOptions = new ChromeOptions();
 				chromeOptions.addArguments("--remote-allow-origins=*");
 				ChromeDriver driver = new ChromeDriver(chromeOptions);
@@ -20,8 +20,8 @@ package adressbook.addressbooksl;
 				driver.get("http://35.170.72.33:8082/addressbook/");
 				driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);
 				driver.findElement(By.className("v-button")).click();
-				driver.findElement(By.id("gwt-uid-5")).sendKeys("Madhu");
-				driver.findElement(By.id("gwt-uid-7")).sendKeys("Thalamanchi");
+				driver.findElement(By.id("gwt-uid-5")).sendKeys("sameer khan");
+				driver.findElement(By.id("gwt-uid-7")).sendKeys("123456");
 				driver.findElement(By.id("gwt-uid-9")).sendKeys("1111111111");
 				driver.findElement(By.id("gwt-uid-11")).sendKeys("abc@gmail.com");
 				driver.findElement(By.id("gwt-uid-13")).sendKeys("3/31/23,");
